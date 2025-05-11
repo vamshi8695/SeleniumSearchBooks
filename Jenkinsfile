@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven 3.8.5' // use your configured Maven version
+        maven 'maven' // use your configured Maven version
     }
 
     environment {
