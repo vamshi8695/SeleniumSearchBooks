@@ -14,6 +14,7 @@ public class SearchBookSteps {
     @When("the user enters {string} in the search box")
     public void user_enters_book_name(String bookName) {
         homePage.enterSearch(bookName);
+        //JENKSIN
     }
 
     @When("clicks the search button")

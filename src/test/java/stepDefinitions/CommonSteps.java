@@ -17,6 +17,7 @@ public class CommonSteps {
         driver = DriverFactory.getDriver();
         driver.get(ConfigReader.get("baseURL"));
         homePage = new HomePage(driver);
+        //JENKINS
     }
 
     @When("the user enters a valid username")
