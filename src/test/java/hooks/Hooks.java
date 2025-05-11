@@ -24,8 +24,8 @@ public class Hooks {
 
     @Before
     public void setUp(Scenario scenario) {
-        // Just initialize the driver – browser is picked up from system property
         DriverFactory.initializeDriver();
+
         driver = DriverFactory.getDriver();
 
         ExtentTest extentTest = extent.createTest(scenario.getName());

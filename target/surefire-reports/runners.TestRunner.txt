@@ -1,15 +1,15 @@
 -------------------------------------------------------------------------------
 Test set: runners.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 16.381 s <<< FAILURE! - in runners.TestRunner
-Search Functionality.Search with an invalid book  Time elapsed: 4.786 s  <<< ERROR!
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 44.009 s <<< FAILURE! - in runners.TestRunner
+Search Functionality.Search with an invalid book  Time elapsed: 22.768 s  <<< ERROR!
 org.openqa.selenium.NoSuchElementException: 
 Unable to locate element: #search\-input
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.14.0', revision: 'e5a96349ce'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [b6a72e29-01b9-4217-8907-a465dd594152, findElement {using=id, value=search-input}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 138.0.1, moz:accessibilityChecks: false, moz:buildID: 20250430203103, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 18716, moz:profile: C:\Users\VAMSHI~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: b6a72e29-01b9-4217-8907-a465dd594152
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [5df820daa77984c9e80da11d75d956ffc1ee4ff1, findElement {using=id, value=search-input}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 138.0, moz:accessibilityChecks: false, moz:buildID: 20250421163656, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12532, moz:profile: C:\Windows\proxy\rust_mozpr..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10...., webdriver.remote.sessionid: 5df820daa77984c9e80da11d75d...}
+Session ID: 5df820daa77984c9e80da11d75d956ffc1ee4ff1
 
