@@ -2,12 +2,12 @@ pipeline {
     agent any
 
     tools {
-        maven 'maven' // use your configured Maven version
+        maven 'maven' // Use your configured Maven installation
     }
 
     environment {
-        BROWSERSTACK_USERNAME = credentials('bs_username') // Use Jenkins credentials
-        BROWSERSTACK_ACCESS_KEY = credentials('bs_access_key')
+        BROWSERSTACK_USERNAME = credentials('bs_username') // BrowserStack username from Jenkins credentials
+        BROWSERSTACK_ACCESS_KEY = credentials('bs_access_key') // BrowserStack access key from Jenkins credentials
     }
 
     stages {
@@ -32,7 +32,16 @@ pipeline {
 
     post {
         always {
-            junit '**/target/surefire-reports/*.xml'
+            // ✅ Ensure test reports are parsed properly
+            junit 'target/surefire-reports/*.xml'
+
+            // (Optional) Clean workspace after build
+            cleanWs()
+        }
+
+        failure {
+            // (Optional) echo something or send Slack/email
+            echo "Build failed. Check test reports and logs."
         }
     }
 }
