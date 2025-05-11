@@ -6,7 +6,8 @@ pipeline {
     }
 
     environment {
-        BROWSER = "browserstack"
+        BROWSERSTACK_USERNAME = credentials('bs_username') // Use Jenkins credentials
+        BROWSERSTACK_ACCESS_KEY = credentials('bs_access_key')
     }
 
     stages {
