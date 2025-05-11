@@ -2,12 +2,12 @@ pipeline {
     agent any
 
     tools {
-        maven 'maven' // Use your configured Maven installation
+        maven 'maven'
     }
 
     environment {
-        BROWSERSTACK_USERNAME = credentials('bs_username') // BrowserStack username from Jenkins credentials
-        BROWSERSTACK_ACCESS_KEY = credentials('bs_access_key') // BrowserStack access key from Jenkins credentials
+        BROWSERSTACK_USERNAME = credentials('bs_username') // Ensure this ID exists in Jenkins
+        BROWSERSTACK_ACCESS_KEY = credentials('bs_access_key')
     }
 
     stages {
@@ -28,19 +28,19 @@ pipeline {
                 archiveArtifacts artifacts: 'target/cucumber-reports/*', allowEmptyArchive: true
             }
         }
+
+        stage('Publish Test Results') {
+            steps {
+                junit 'target/surefire-reports/*.xml'
+            }
+        }
     }
 
     post {
         always {
-            // ✅ Ensure test reports are parsed properly
-            junit 'target/surefire-reports/*.xml'
-
-            // (Optional) Clean workspace after build
             cleanWs()
         }
-
         failure {
-            // (Optional) echo something or send Slack/email
             echo "Build failed. Check test reports and logs."
         }
     }
